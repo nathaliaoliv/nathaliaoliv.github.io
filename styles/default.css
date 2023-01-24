@@ -1,6 +1,7 @@
 
 body
 {
+  text-align: center;
   margin: 200px;
   font-family: Georgia, serif;
   background-color: rgb(253,224,221);
@@ -8,6 +9,7 @@ body
 }
 header,footer
 {
-  text-align: center
+  text-align: center;
   font-family: Garamond, serif;
+  
 }
