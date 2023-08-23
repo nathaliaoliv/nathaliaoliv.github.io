@@ -1,0 +1,14 @@
+
+body
+{
+  margin: 200px;
+  font-family: Georgia, serif;
+  background-color: rgb(253,224,221);
+  font-size: 100%;
+}
+header,footer
+{
+  text-align: center;
+  font-family: Garamond, serif;
+  background-color: #ff00ff;  
+}
