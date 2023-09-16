@@ -6,6 +6,18 @@ body
   background-color: rgb(253,224,221);
   font-size: 100%;
 }
+
+figure {
+  float: right;
+  width: 30%;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
 header,footer
 {
   text-align: center;
