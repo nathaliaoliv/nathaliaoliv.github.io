@@ -3,6 +3,7 @@ body
 {
   margin: 200px;
   font-family: Georgia, serif;
+  color:#FF69B4;
   background-color: rgb(253,224,221);
   font-size: 100%;
 }
@@ -22,6 +23,13 @@ header,footer
 {
   text-align: center;
   font-family: Garamond, serif;
+  color: #FFB6C1;
   background-color: #ff00ff; 
   padding: 20px; 
 }
+
+a:hover
+{
+  color:#FF1493;
+}
+
