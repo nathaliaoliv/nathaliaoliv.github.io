@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!--
+General Information about Oliveira's Family Recipes
+Author: Nathalia Oliveira
+Date: 10/29/2023
+
+Filename: ofr_about.HTML-->
+<!-- Set metadata of the document-->
+	<meta charset="utf-8" />
+	<meta name="keywords"
+		  content="recipes, family" />
+	<title>About Oliveira's Family Recipes</title>
+	<!--Link to CSS file(s)-->
+	<link href="ofr_base.css" rel="stylesheet" />
+	<link href="ofr_layout2.css" rel="stylesheet" />
+</head>
+<!--Use sectioning, grouping, and text-level elements-->
+<body>
+<header>
+	<h1>Oliveira's Family Recipes</h1>
+	 <!--Include navigation list with hypertext links-->
+	<nav>
+		<ul>
+			<li><a href="ofr_about.html">About</a></li>
+			<li><a href="ofr_breakfast.html">Breakfast</a></li>
+			<li><a href="ofr_snacks.html">Snacks</a></li>
+			<li><a href="ofr_dinner.html">Dinner</a></li>
+			<li><a href="ofr_holidays.html">Holidays</a></li>
+			<li><a href="ofr_contact.html">Contact</a></li>
+		</ul>
+	</nav>	
+		
+</header>
+<article>
+	<h1>Survey Form</h1>
+	<body>
+    <h2>Please fill out this form to help us be the best family recipes website ever:</h2>
+	<!-- Create and format a form with multiple field sets -->
+    <form method="post" action='http://www.example.com/oliveirafamilyrecipes/survey'>
+      <fieldset>
+	  <!-- Include the following input types: date/time -->
+		<label for="todayDate">Enter today's date: </label>
+			<input name="visitDate" id="visit" type="date"</label>
+	  <!-- Include the following input types: text -->
+        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+		<!-- Validate data with by having certain fields required -->
+		<!-- Include at least one input that is set for a mobile keyboard type: email -->
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+      </fieldset>
+      <fieldset>
+	  <div>
+	  <!-- Include the following input types: range slider -->
+		<label for="rangeBox">How do you like our website? </label>
+		 Poor -------------------------------------------------------------------------- Excelent                                                
+		 <input name="websiteRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10" />
+		 </div>
+	  <!-- Include the following input types: radio buttons -->
+        <legend>Would you recommend our website to your friends and family? </legend>
+        <label for="Yes"><input id="yes" type="radio" name="recommendNo" class="inline" checked /> Yes, I would recommend it</label>
+        <label for="No"><input id="no" type="radio" name="recommendYes" class="inline" /> No, I would not reccomend it</label>
+      </fieldset>
+      <fieldset>
+	  	<!-- Validate data with patterns and field lengths -->
+        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="5" max="120" /></label>
+		<!-- Create a selection list -->
+        <label for="referrer">What would you like to read: 
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Breakfast Recipes</option>
+            <option value="2">Snacks Recipes</option>
+            <option value="3">Dinner Recipes</option>
+			<option value="3">Holidays Recipes</option>
+            <option value="4">All of the above</option>
+          </select>
+        </label>
+		<!-- Include a datalist and use it for input -->
+		<!-- <div class="formRow" -->
+			<label for="recipe"> What is your favorite recipe from our website?</label>
+			<input name="favRecipe" id="recipe" type="text" list="recipeType" />
+			<datalist id="recipeType">
+				<option value="Carne Cozida com Mandioca / Beef and Yuca Stew">
+				<option value="Frozen Banana Peanut Butter Bites">
+				<option value="Chicken Bacon Wrapped">
+			</datalist>
+		<!-- </div> -->
+		
+		
+		<!-- Include the following input types: text: text area box -->
+        <label for="feedback">Provide a feedback:
+		<!-- Validate data with patterns and field lengths -->
+          <textarea id="feedback" name="feedback" rows="3" cols="30" maxlength="150" placeholder="I would like to suggest ..."></textarea>
+        </label>
+      </fieldset>
+	  <!-- Include the following input types: check box -->
+	  <!-- Validate data with by having certain fields required -->
+	  <input name="mailMe" id="mailCB" value="yes" type="checkbox" required />
+	  <label for="mailCB">Add me to your mailing list to be the first to know when a new recipe is added!</label>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+	
+	
+
+</article>
+<footer>
+ <!--Include character references-->
+		Oliveira's Family Recipes &#8226; Pineville NC &nbsp; 28201 &#8226; 704-555-1151
+</footer>			
+</body>
+
+</html>
