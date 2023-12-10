@@ -1,0 +1,102 @@
+<!-- Create and call a JavaScript function that keeps track of the current day and time
+Send an alert using JavaScript
+Use a Math method
+Delay one command or run a command at a specified interval
+Convert between a number and a text
+Include a countdown function 
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+<!--
+General Information about Oliveira's Family Recipes
+Author: Nathalia Oliveira
+Date: 10/29/2023
+
+Filename: ofr_about.HTML-->
+<!-- Set metadata of the document-->
+	<meta charset="utf-8" />
+	<meta name="keywords"
+		  content="recipes, family" />
+	<title>About Oliveira's Family Recipes</title>
+	<!--Link to CSS file(s)-->
+	<link href="ofr_base.css" rel="stylesheet" />
+	<link href="ofr_layout2.css" rel="stylesheet" />
+</head>
+<!--Use sectioning, grouping, and text-level elements-->
+<body>
+<header>
+	<h1>Oliveira's Family Recipes</h1>
+	 <!--Include navigation list with hypertext links-->
+	<nav>
+		<ul>
+			<li><a href="ofr_about.html">About</a></li>
+			<li><a href="ofr_breakfast.html">Breakfast</a></li>
+			<li><a href="ofr_snacks.html">Snacks</a></li>
+			<li><a href="ofr_dinner.html">Dinner</a></li>
+			<li><a href="ofr_holidays.html">Holidays</a></li>
+			<li><a href="ofr_contact.html">Contact</a></li>
+		</ul>
+	</nav>	
+		
+</header>
+<article>
+<!-- Create and call a JavaScript function that keeps track of the current day and time  -->
+	<h1>Current Date and Time<h1>
+
+<p id="dt"><p>
+<script>
+var currentDay = new Date("May 23, 2021 14:35:05");
+var dateStr = currentDay.toLocaleDateString();
+var timeStr = currentDay.toLocaleTimeString();
+
+document.getElementById("dt").innerHTML = dateStr + "<br />" + timeStr;
+</script>
+ <h1>CountDown to Christmas</h1>
+ <p id="days">Days Until Christmas</p>
+<script>
+function runClock() {
+/*Calculate Days until Christmas */
+var christmas = new Date("December 25, 2023");
+var nextYear = currentDay.getFullYear() + 1;
+christmas.setFullYear(nextYear);
+var daysLeft = (christmas - currentDay)/(1000*60*60*24);
+/* display days left until christmas */
+
+document.getElementById("days").innerHTML = Math.floor(daysLeft);
+</script>
+<script>runClock();</script>
+
+<!-- 
+<script type = "text/javascript">
+
+function alertMessage()
+
+{
+
+alert ("You are Amazing!");
+
+}
+
+</script>
+
+<input type = "button" value = "Click here for an Alert" onclick = "alertMessage();" /> -->
+
+<!-- Include a countdown function-->
+
+
+</article>
+<footer>
+ <!--Include character references-->
+		Oliveira's Family Recipes &#8226; Pineville NC &nbsp; 28201 &#8226; 704-555-1151
+</footer>			
+</body>
+
+</html>
+
+
+
+
+
