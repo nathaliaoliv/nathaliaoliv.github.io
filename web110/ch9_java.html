@@ -45,178 +45,55 @@ Filename: ofr_about.HTML-->
 		
 </header>
 <article>
+	<!--Create and call a JavaScript function that keeps track of the current day and time-->
+	<h1>Current Day and Time</h1>
+
+	<p id="dt"></p>
+	
+	<script>
+	
+	var thisDay = new Date();
+	
+	var thisDate = thisDay.getFullYear()+'/'+(thisDay.getMonth()+1)+'/'+thisDay.getDate();
+	
+	var thisTime = thisDay.getHours() + ":" + thisDay.getMinutes() + ":" + thisDay.getSeconds();
+	
+	var DateandTime = thisDate+' '+thisTime;
+	
+	document.getElementById("dt").innerHTML = thisDay
+	
+	document.getElementById("dt").innerHTML = thisDate
+	
+	document.getElementById("dt").innerHTML = thisTime
+	
+	document.getElementById("dt").innerHTML = DateandTime
+	
+	</script>
 		
-		<P>KEEP TRACK ON CURRENT DATE AND TIME</P>
-		
-		<p id="daa"></p>
-		
-		<script>
-		
-		var today1 = new Date();
-		
-		var date1 = today1.getFullYear()+'-'+(today1.getMonth()+1)+'-'+today1.getDate();
-		
-		var time1 = today1.getHours() + ":" + today1.getMinutes() + ":" + today1.getSeconds();
-		
-		var datetime1 = date1+' '+time1;
-		
-		document.getElementById("daa").innerHTML = today1
-		
-		document.getElementById("daa").innerHTML = date1
-		
-		document.getElementById("daa").innerHTML = time1
-		
-		document.getElementById("daa").innerHTML = datetime1
-		
-		</script>
-		
-		<p> CLICK HERE AND GET AN ALERT </p>
-		
-		<form>
-		
-		<input type = "button" value = "CLICK THE BUTTON FOR ALERT" onclick = "fun();" />
-		
-		</form>
-		
-		// USING A MATH FUNCTION
-		
-		<p id="maths"></p>
-		
-		<script>
-		
-		document.getElementById("maths").innerHTML = Math.round(4.6); // rounding the value 4.6 to 5
-		
-		</script>
-		
-		<p>CLICK THE BUTTON AND WAIT FOR 5 SECONDS (DELAY) </p>
-		
-		<button onclick="ourTimeFunction()">CLICK HERE FOR DELAY</button>
-		
-		<script>
-		
-		function ourTimeFunction()
+	<!--Send an alert using JavaScript-->	
+	<script type = "text/javascript">
+
+		function alertMessage()
 		
 		{
 		
-		setTimeout(function(){ alert("PLEASE WAIT...AFTER 5 SECONDS...!"); }, 5000);
+		alert ("You are Amazing!");
 		
 		}
 		
-		</script>
+	</script>
 		
-		<p>RUN A COMMAND AT A SPECIFIED INTERVAL</p>
-		
-		<button onclick="doSomething()">CLICK HERE TO DO SOMETHING</button>
-		
-		<script>
-		
-		function doSomething()
-		
-		{
-		
-		alert('This pops up every 5 seconds and is annoying!');
-		
+	<input type = "button" value = "Click here for an Alert" onclick = "alertMessage();" /> 
+	<!--Delay one command or run a command at a specified interval-->
+	<input type="button" value = "Click here for an Alert in 3 seconds" onclick = "delayAlertFunction();"/>
+	
+	<script>
+		function delayAlertFunction() {
+		setTimeout(function(){ alert("You are Amazing!"); }, 3000);
 		}
-
-		
-		
-		//setInterval(doSomething, 5000); this line of code will give continous alert and the time is in milliseconds, you can uncomment this line.
-		
-		</script>
-		
-		<script> 
-		
-		myString = '234'
-		
-		myString=console.log(parseInt(myString)) // here the expected result is: 234
-		
-		a = 23.45
-		
-		console.log(parseInt(a)) // here the expected result is: 23.45
-		
-		</script>
-		
-		<p>THIS IS OUR COUNT DOWN TIMER</p>
-		
-		<p id="demo2"></p>
-		
-		<script>
-		
-		// SETTING THE DATE OF COUNTING DOWN
-		
-		var dateOfCountDown = new Date("Jan 1, 2025 16:42:26").getTime();
-		
-		// Update the count down every 1 second
-		
-		var a = setInterval(function() {
-		
-		// Get today's date and time
-		
-		var now1 = new Date().getTime();
-		
-		// Find the distance between now and the count down date
-		
-		var distance1 = dateOfCountDown - now1;
-		
-		// Time calculations for days, hours, minutes and seconds
-		
-		var daysleft = Math.floor(distance1 / (1000 * 60 * 60 * 24));
-		
-		var hoursleft = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		
-		var minutesleft = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
-		
-		var secondsleft = Math.floor((distance1 % (1000 * 60)) / 1000);
-		
-		// Display the result in the element with id="demo"
-		
-		document.getElementById("demo2").innerHTML = daysleft + "d " + hoursleft+ "h "
-		
-		+ minutesleft + "m " + secondsleft + "s ";
-		
-		// If the count down is finished, write some text
-		
-		if (distance < 0) {
-		
-		clearInterval(a);
-		
-		document.getElementById("demo2").innerHTML = "EXPIRED";
-		
-		}
-		
-		}, 1000);
-		
-		</script>
-		
-		</body>
-		
-		</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type = "text/javascript">
-
-function alertMessage()
-
-{
-
-alert ("You are Amazing!");
-
-}
-
-</script>
-
-<input type = "button" value = "Click here for an Alert" onclick = "alertMessage();" /> 
+	</script>
+	<!--Include a countdown function -->
+	<h1>Count Down Clock</h1>
 
 </article>
 <footer>
