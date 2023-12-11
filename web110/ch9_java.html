@@ -49,12 +49,9 @@ Filename: ofr_about.HTML-->
 	<h1>Current Date and Time<h1>
 
 <p id="dt"><p>
-<script type = "text/javascript">
-let today = new Date();
-const hours = now.getHours();
-const minutes = now.getMinutes();
-console.log(new Date() + hours + minutes);
-</script>
+<script> function showDay(dateStr, timeStr) {
+	document.getElementById("dateNow").innerHTML = dateStr + "<br />" + timeStr;
+}</script>
 
 <!-- Include a countdown function --> 
  <h1>CountDown to New Years</h1>
