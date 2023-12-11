@@ -50,12 +50,11 @@ Filename: ofr_about.HTML-->
 
 <p id="dt"><p>
 <script>
-var currentDay = new Date("May 23, 2021 14:35:05");
-var dateStr = currentDay.toLocaleDateString();
-var timeStr = currentDay.toLocaleTimeString();
-
-document.getElementById("dt").innerHTML = dateStr + "<br />" + timeStr;
+let today = new Date();
+console.log(new Date());
 </script>
+
+<!-- Include a countdown function --> 
  <h1>CountDown to Christmas</h1>
  <p id="days">Days Until Christmas</p>
 <script>
@@ -89,7 +88,8 @@ alert ("You are Amazing!");
 <input type = "button" value = "Click here for an Alert" onclick = "alertMessage();" /> 
 
 
-
+//
+//
 
 </article>
 <footer>
