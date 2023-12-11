@@ -57,17 +57,16 @@ console.log(new Date() + hours + minutes);
 </script>
 
 <!-- Include a countdown function --> 
- <h1>CountDown to Christmas</h1>
- <p id="days">Days Until Christmas</p>
+ <h1>CountDown to New Years</h1>
+ <p id="days"></p>
 <script>
 function runClock() {
-/*Calculate Days until Christmas */
-var christmas = new Date("December 25, 2023");
+/*Calculate Days until New Years */
+var NewYear = new Date("January 1, 2021");
 var nextYear = currentDay.getFullYear() + 1;
-christmas.setFullYear(nextYear);
-var daysLeft = (christmas - currentDay)/(1000*60*60*24);
-/* display days left until christmas */
-
+newYear.setFullYear(nextYear);
+var daysLeft = (newYear - currentDay)/(1000*60*60*24);
+/* display days left until New Years */
 document.getElementById("days").innerHTML = Math.floor(daysLeft);
 </script>
 
